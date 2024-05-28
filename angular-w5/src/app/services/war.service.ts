@@ -32,8 +32,8 @@ export class WarService {
   startGame(): Observable<any> {
     return this.http.get(`${this.apiUrl}/new/shuffle/?deck_count=1`);
   }
-  drawCards(deckId: string, count: number): Observable<any>{
-    return this.http.get(`${this.apiUrl}/${deckId}/draw/?count=${count}`);
+  drawCards(deckId: string): Observable<any>{
+    return this.http.get(`${this.apiUrl}/${deckId}/draw/?count=52`);
   }
 
   compareCards(card1: any, card2: any): number {

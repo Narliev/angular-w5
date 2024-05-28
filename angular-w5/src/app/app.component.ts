@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { WargameComponent } from './wargame/wargame.component';
-import { TwentyoneComponent } from './twentyone/twentyone.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { GuesssuitComponent} from './guess-suit/guess-suit.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   
-  imports: [RouterOutlet,WargameComponent, TwentyoneComponent,CommonModule],
+  imports: [RouterOutlet,WargameComponent,GuesssuitComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers: [HttpClientModule]
@@ -23,9 +23,9 @@ export class AppComponent {
   {
     this.switchC = 'wg';
   }
-  startT()
+  startG()
   {
-    this.switchC = 'tg';
+    this.switchC = 'gg';
   }
 
 }

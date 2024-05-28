@@ -1,7 +1,7 @@
 <button (click)="startW()">War game</button>
-<button (click)="startT()">TwentyOne</button>
+<button (click)="startG()">Guess color</button>
 <ng-container [ngSwitch]="switchC">
 <app-wargame *ngSwitchCase="'wg'"></app-wargame>
-<app-twentyone *ngSwitchCase="'tg'"></app-twentyone>
+<app-guess-suit *ngSwitchCase="'gg'"></app-guess-suit>
 </ng-container>
 <router-outlet></router-outlet>

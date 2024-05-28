@@ -35,7 +35,7 @@ export class WargameComponent implements OnInit {
   }
 
   drawCards(): void {
-    this.warS.drawCards(this.deckId, 52).subscribe((response) => {
+    this.warS.drawCards(this.deckId).subscribe((response) => {
       this.player1Cards = response.cards.slice(0, 26);
       this.player2Cards = response.cards.slice(26);
     });
