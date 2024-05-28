@@ -1,0 +1,15 @@
+<div style="justify-items: center;">
+    <h1>TwentyOne</h1>
+    <button (click)="drawCard()">Draw card</button>
+    <button (click)="startGame()">Restart</button>
+    <div *ngIf="winner">
+      <h2>Winner!</h2>
+    </div>
+    </div>
+    <div>
+      <div style="float:left">
+        <h3>Player 1</h3>
+        <h4>Current score: {{score}}</h4>
+        <div *ngFor="let cards of playerCards"><img  [src]="cards.image"></div>
+      </div>
+    </div>

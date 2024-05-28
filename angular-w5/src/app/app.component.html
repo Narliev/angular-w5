@@ -1,0 +1,7 @@
+<button (click)="startW()">War game</button>
+<button (click)="startT()">TwentyOne</button>
+<ng-container [ngSwitch]="switchC">
+<app-wargame *ngSwitchCase="'wg'"></app-wargame>
+<app-twentyone *ngSwitchCase="'tg'"></app-twentyone>
+</ng-container>
+<router-outlet></router-outlet>
